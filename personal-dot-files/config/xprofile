@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# this script runs when a display manager logs you in or when startx is run from a TTY
+# put things in here that you want to auto start when logging in to your GUI.
+
+#3-monitors.sh &         # set my 3 monitors the way I prefer
+xwp &                # set wallpaper using xwallpaper (you can replace this with xwal to get a random wallpaper)
+#fehbg &                # set wallpaper using feh (you can replace this with wal to get a random wallpaper)
+picom &                 # launch picom (formerly compton) to get transparency working
+lxpolkit &              # provides extended privileges to applications.
+slstatus &              # suckless status bar... the best status bar
+fastscrolling.sh &      # increases speed of the cursor when moving around.

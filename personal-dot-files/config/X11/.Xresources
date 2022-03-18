@@ -1,0 +1,58 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+Xterm*renderFont: true
+Xterm*faceName: xft:Monospace
+Xterm*faceSize: 14
+Xterm*urf8: 2
+Xterm*locale: true
+
+Xterm.vt100.translations: #override \n\
+	Ctrl <Key> j; smaller-vt-font() \n\
+	Ctrl <Key> k: larger-vt-font()
+
+! scrollback lines
+Xterm*savelines: 2000
+
+! double-click to select whole URLs
+Xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+! Xterm Color theme
+Xterm*foreground: #f8f8f2
+Xterm*background: #282a36
+Xterm*cursorColor: #f8f8f2
+
+
+! Get rid of the scroll bar in URxvt
+URxvt.scrollBar: false
+
+! Floating window size URxvt
+URxvt*geometry: 120x45
+! FONTS
+URxvt.font:xft:Monospace:pixelsize=14
+URxvt.boldfont:xft:Monospace-Bold:pixelsize=14
+
+! Hybrid Xresources palette
+*.foreground: #c5c8c6
+*.background: #1d1f21
+*.color0:     #282a2e
+*.color8:     #373b41
+*.color1:     #a54242
+*.color9:     #cc6666
+*.color2:     #8c9440
+*.color10:    #b5bd68
+*.color3:     #de935f
+*.color11:    #f0c674
+*.color4:     #5f819d
+*.color12:    #81a2be
+*.color5:     #85678f
+*.color13:    #b294bb
+*.color6:     #5e8d87
+*.color14:    #8abeb7
+*.color7:     #707880
+*.color15:    #c5c8c6

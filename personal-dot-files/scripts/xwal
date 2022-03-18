@@ -1,0 +1,22 @@
+#!/bin/bash
+# requires xwallpaper
+# uncomment lines 6 and 21 for lockscreen (depends on imagemagick)
+
+# Directory Containing the Pictures
+BG="$HOME/.local/share/backgrounds"
+#LK="$HOME/.local/share/lockscreen"
+# Command to Select wallpapers at random from the $DIR directory
+
+WAL=$(ls $BG/*.png | shuf -n1)
+
+# Set lockscreen wallpaper
+
+cat $WAL > $BG/current-wallpaper.png
+
+# Set Desktop Wallpaper
+
+xwallpaper --zoom $BG/current-wallpaper.png
+
+#set blurred copy of desktop wallpaper as lockscreen
+
+#convert $BG/current-wallpaper.png -blur 0x3 $LK/locker.png -gravity center -composite -matte $LK/lockscreen.png

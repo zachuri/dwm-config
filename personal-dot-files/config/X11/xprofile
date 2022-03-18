@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# this file runs when a DM logs you into a graphical environment
+# if you use startx or xinit, this file will also be sourced.
+
+2-monitors.sh &             # script to setup my 3 monitors the way I prefer
+xwp.sh &                     # set wallpaper (you can replace this with wal to get a random wallpaper on start)
+picom &                     # launch picom to get transparency
+lxpolkit &                  # lxde policy kit because it makes launching things that need root password better
+xrdb -merge ~/.config/X11/.Xresources   # call .Xresources settings for urxvt terminals
+xset r rate 300 50 &        # increase scroll speed and polling rate
