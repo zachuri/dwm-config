@@ -1,12 +1,11 @@
 #!/bin/sh
 
 DMENU='dmenu -i -l 5'
-choice=$(echo -e "logout\nsleep\nreboot\nshutdown\nquit-pmenu" | $DMENU)
+choice=$(echo -e "logout\nreboot\nshutdown\nquit-pmenu" | $DMENU)
 
 case "$choice" in
 	logout) pkill dwm ;;
-	sleep) sudo systemctl hibernate ;;
-	reboot) sudo systemctl poweroff ;;
-	shutdown) sudo systemctl reboot ;;
+	reboot) systemctl poweroff ;;
+	shutdown) systemctl reboot ;;
 	quit-pmenu) exit 0 ;;
 esac
