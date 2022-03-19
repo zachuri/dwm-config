@@ -1,0 +1,4 @@
+#!bin/sh
+
+cd .configure/dwm-config/dwm
+sudo vim config.h
