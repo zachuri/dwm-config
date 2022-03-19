@@ -1,4 +1,3 @@
-#!bin/bash
+#!/bin/sh
 
-cd .configure/dwm-config/dwm
-sudo make clean install
+sudo make clean install ~/.config/dwm-config/dwm
