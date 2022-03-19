@@ -78,7 +78,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F12,	   spawn,          {.v = upvol   } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = web } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = dmenucmd } },
 	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
