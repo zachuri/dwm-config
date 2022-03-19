@@ -112,7 +112,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	// { MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("pmenu") },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = exitmenu } },
-	{ MODKEY|ControlMask,           XK_q,      quit,           {0} }, //replaced above
+	//{ MODKEY|ControlMask,           XK_q,      quit,           {0} }, //replaced above
 };
 
 /* button definitions */
