@@ -5,7 +5,7 @@ choice=$(echo -e "logout\nreboot\nshutdown\nquit-pmenu" | $DMENU)
 
 case "$choice" in
 	logout) pkill dwm ;;
-	reboot) systemctl poweroff ;;
-	shutdown) systemctl reboot ;;
+	reboot) systemctl reboot ;;
+	shutdown) systemctl poweroff ;;
 	quit-pmenu) exit 0 ;;
 esac

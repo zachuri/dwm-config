@@ -5,7 +5,14 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+
+
+
+//Use this command to find your fonts
+//fc-list | awk -F ":" '{ print $2 }' | uniq
+
+//static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "CaskaydiaCove Nerd Font:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
