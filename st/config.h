@@ -176,8 +176,12 @@ static uint forcemousemod = ShiftMask;
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
+#define MODKEY Mod1Mask
+
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
+	{ MODKEY,          	Button4, kscrollup,      {.i = 3} },
+	{ MODKEY,            	Button5, kscrolldown,    {.i = 3} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
@@ -203,6 +207,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ MODKEY,            	XK_k,     	kscrollup,      {.i = 3} },
+	{ MODKEY,            	XK_j,           kscrolldown,    {.i = 3} },
 };
 
 /*
