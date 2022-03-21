@@ -12,7 +12,8 @@
 //fc-list | awk -F ":" '{ print $2 }' | uniq
 
 //static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
-static char *font = "CaskaydiaCove Nerd Font:pixelsize=14:antialias=true:autohint=true";
+//static char *font = "CaskaydiaCove Nerd Font:pixelsize=14:antialias=true:autohint=true";
+static char *font = "CaskaydiaCove NF:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
