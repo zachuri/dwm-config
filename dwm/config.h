@@ -77,6 +77,7 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 //static const char *downvol[] = { "pamixer", "--allow-boost", "-d", "5"};
 //static const char *mutevol[] = { "pamixer", "-t" };
 
+#include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_F9,	   spawn,          {.v = mutevol } },
@@ -93,6 +94,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_m,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ControlMask,           XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
