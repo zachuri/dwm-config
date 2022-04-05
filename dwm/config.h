@@ -70,6 +70,8 @@ static const char *web[]  = { "brave", NULL };
 static const char *discord[]  = { "discord", NULL };
 static const char *exitmenu[]  = { "pmenu", NULL };
 static const char *rangercmd[]  = { "st", "ranger", NULL };
+static const char *redshifton[]  = { "redshift-on", NULL };
+static const char *redshiftoff[]  = { "redshift-off", NULL };
 
 // AUDIO use pavucontrol GUI / install pipewire-pulse (CHECK xinitrc)
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
@@ -83,13 +85,15 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_F9,	   spawn,          {.v = mutevol } },
-	{ MODKEY,                       XK_F11,	   spawn,		   {.v = downvol } },
+	{ MODKEY,                       XK_F11,	   spawn,	   {.v = downvol } },
 	{ MODKEY,                       XK_F12,	   spawn,          {.v = upvol   } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = web } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = discord } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = dmenucmd } },
-	{ MODKEY,						XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,			XK_t,      spawn,          {.v = redshifton } },
+	{ MODKEY|ShiftMask,	        XK_t,      spawn,          {.v = redshiftoff } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -101,7 +105,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ControlMask,           XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,             		    XK_q,      killclient,     {0} },
+	{ MODKEY,             		XK_q,      killclient,     {0} },
 	{ MODKEY|ControlMask,           XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ControlMask,           XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ControlMask,           XK_m,      setlayout,      {.v = &layouts[2]} },
