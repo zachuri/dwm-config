@@ -72,6 +72,7 @@ static const char *exitmenu[]  = { "pmenu", NULL };
 static const char *rangercmd[]  = { "st", "ranger", NULL };
 static const char *redshifton[]  = { "redshift-on", NULL };
 static const char *redshiftoff[]  = { "redshift-off", NULL };
+static const char *vscode[]  = { "code", NULL };
 
 // AUDIO use pavucontrol GUI / install pipewire-pulse (CHECK xinitrc)
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
@@ -94,6 +95,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,			XK_t,      spawn,          {.v = redshifton } },
 	{ MODKEY|ShiftMask,	        XK_t,      spawn,          {.v = redshiftoff } },
+	{ MODKEY,	        	XK_c,      spawn,          {.v = vscode } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
