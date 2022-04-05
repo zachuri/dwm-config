@@ -1,4 +1,4 @@
 #!/bin/sh
 
 redshift -x 
-
+nvidia-settings -l
