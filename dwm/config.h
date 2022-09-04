@@ -23,7 +23,7 @@ static const char *colors[][3]      = {
 
 /* tagging */
 //static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-static const char *tags[] = { "1", "2", "3", "4", "5" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -73,6 +73,7 @@ static const char *rangercmd[]  = { "st", "ranger", NULL };
 static const char *redshifton[]  = { "redshift-on", NULL };
 static const char *redshiftoff[]  = { "redshift-off", NULL };
 static const char *vscode[]  = { "code", NULL };
+static const char *filemanager[]  = { "nemo", NULL };
 
 // AUDIO use pavucontrol GUI / install pipewire-pulse (CHECK xinitrc)
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
@@ -85,6 +86,7 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_e,	   spawn,          {.v = filemanager } },
 	{ MODKEY,                       XK_F9,	   spawn,          {.v = mutevol } },
 	{ MODKEY,                       XK_F11,	   spawn,	   {.v = downvol } },
 	{ MODKEY,                       XK_F12,	   spawn,          {.v = upvol   } },
