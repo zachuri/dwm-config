@@ -13,7 +13,7 @@
 
 //static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 //static char *font = "CaskaydiaCove Nerd Font:pixelsize=14:antialias=true:autohint=true";
-static char *font = "Caskaydia Cove Nerd Font:pixelsize=14:antialias=true:autohint=true";
+static char *font = "CaskaydiaCove Nerd Font:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
