@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd ~/.config/dwm-config/st &&
+sudo rm -rf config.h &&
+sudo make clean install
