@@ -1,7 +1,7 @@
 #!/bin/sh
 
 clock=$(date '+%I')
-icon=""
+icon="|"
 #case "$clock" in
 	#"00") icon="🕛" ;;
 	#"01") icon="🕐" ;;
@@ -26,5 +26,5 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-date "+%b %d (%a) $icon %I:%M%p"
+date "+%b %d, %a $icon %I:%M %p"
 #date "+%a, %b %d 🕓 %I:%M %p"
