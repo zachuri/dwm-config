@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd ~/Documents/Melee/gcadapter-oc-kmod && make clean && make && 
+
+sudo insmod gcadapter_oc.ko rate=1
