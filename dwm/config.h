@@ -75,6 +75,7 @@ static const char *redshiftoff[]  = { "redshift-off", NULL };
 static const char *vscode[]  = { "code", NULL };
 static const char *filemanager[]  = { "nemo", NULL };
 static const char *pomotimer[]  = { "pomotroid-run", NULL };
+static const char *slack[]  = { "slack", NULL };
 
 // AUDIO use pavucontrol GUI / install pipewire-pulse (CHECK xinitrc)
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
@@ -100,6 +101,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,	        XK_t,      spawn,          {.v = redshiftoff } },
 	{ MODKEY,	        	XK_c,      spawn,          {.v = vscode } },
 	{ MODKEY,	        	XK_p,      spawn,          {.v = pomotimer } },
+	{ MODKEY,	        	XK_s,      spawn,          {.v = slack } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
