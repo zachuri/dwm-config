@@ -2,6 +2,6 @@
 
 xrandr \
 --output DP-2 --rotate normal --mode 3440x1440 --rate 165.00 --primary \
---output DVI-D-0 --rotate right --left-of DP-2 --mode 1920x1080 --rate 144.00 \
---output HDMI-0 --rotate left --right-of DP-2 --mode 1920x1080 --rate 144.00 \
+--output DVI-D-0 --rotate right --right-of DP-2 --mode 1920x1080 --rate 144.00 \
+--output HDMI-0 --rotate left --left-of DP-2 --mode 1920x1080 --rate 144.00 \
 --output DP-0 --rotate normal --above DP-2 --mode 1920x1080 --rate 239.96 \
