@@ -47,7 +47,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
+	//{ ">M>",      centeredfloatingmaster },
 };
 
 /* key definitions */
@@ -117,8 +117,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ControlMask,           XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ControlMask,           XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ControlMask,           XK_u,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY|ControlMask,           XK_o,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY|ControlMask,           XK_c,      setlayout,      {.v = &layouts[3]} },
+	//{ MODKEY|ControlMask,           XK_o,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
